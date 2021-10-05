@@ -1,0 +1,38 @@
+{
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/manifest.webmanifest",
+          "/assets/main.f51fa4f79f0fd4227b7c999.js",
+          "/assets/delay.style.css",
+          "/*.css",
+          "/*.js",
+          "!/main.575812a414109667edf6.js",
+          "!/styles.31d6cfe0d16ae931b73c.css"
+        ],
+        "urls": [
+          "https://fonts.googleapis.com/**",
+          "https://fonts.gstatic.com/s/**"
+        ]
+      }
+    }, {
+      "name": "assets",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**",
+          "!/assets/coverage/**",
+          "/*.(css|eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)",
+          "!/styles.31d6cfe0d16ae931b73c.css"
+        ]
+      }
+    }
+  ]
+}

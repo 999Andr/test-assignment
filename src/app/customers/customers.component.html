@@ -1,0 +1,37 @@
+<div class="container-xl" role="main"> 
+  
+  <cheerful-users></cheerful-users>
+  <register-form></register-form>
+
+</div>
+
+<div bsModal #childModal="bs-modal" class="modal fade" tabindex="-1" 
+     (onHide)="handler(hiddModal)"
+     role="dialog" aria-labelledby="dialog-child-name">
+  <div class="modal-dialog modal-dialog-centered " [hidden]='hiddModal'>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 id="dialog-child-name" class="modal-title pull-left">
+           Congratulations
+        </h4>
+        <button type="button" class="btn close pull-right" 
+        aria-label="Close" (click)="hideChildModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>You have successfully passed the registration</p>
+      </div> 
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="hideChildModal()">
+          Great
+        </button>
+      </div>
+    </div>
+  </div> 
+
+</div>
+
+<div #sideBar id='sideBar'>
+  <sidebar-menu></sidebar-menu>
+</div>

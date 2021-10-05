@@ -1,0 +1,16 @@
+.btn { 
+  &:active,
+  &.active,
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: none !important;
+    background: #e41601;
+    border-color: #e41601;
+  }
+}   
+
+button { 
+  word-spacing: .015rem; 
+  letter-spacing: .015rem;
+}

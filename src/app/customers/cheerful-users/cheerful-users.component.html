@@ -1,0 +1,38 @@
+  <div class="row users" #top>            
+    
+    <div class="col-12 text-center"> 
+      <h1>Our cheerful users</h1>
+      <p>Attention! Sorting users by registration date</p>
+    </div>
+    
+    <div class="col-md-4" *ngFor='let user of users; trackBy: trackByFn'>
+        
+      <div class="usercard mx-auto text-center">
+        <img src="{{user.photo}}" alt="Cheerfull user photo" class="rounded-circle" 
+        width="70" height="70">
+        <p class="h4 text-break">{{user.name}}</p>
+        <p class="text-break">{{user.position}}</p>
+        <p class="email" [tooltip]='user.email' placement="bottom">{{user.email}}</p>
+        <p> 
+          +380 {{user.phone | slice:4:6}} {{user.phone | slice:6:9}} 
+          {{user.phone | slice:9:11}} {{user.phone | slice:11:13}}
+        </p>
+      </div>
+      
+    </div>
+    
+    <div class="col-12 text-center" [hidden]='hideButton'>
+       
+      <button (click)="showMoreUsers()" [disabled]='offline' class="btn btn-success" 
+        id='usersBtn'
+        popoverTitle="DISCONNECTED" popover="Please check a online state." 
+        triggers="" [isOpen]='offline' placement="bottom">
+          Show more
+      </button>
+    
+    </div> 
+
+  </div>
+  
+ 
+

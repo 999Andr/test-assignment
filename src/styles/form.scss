@@ -1,0 +1,29 @@
+label { 
+    font-family: "PT Sans", sans-serif;
+    color: #212529;
+}
+  
+label[for="user_email"] {
+    letter-spacing: -.015rem;
+}
+
+.err-color {
+    color: #f44336;
+    letter-spacing: -.025rem;
+    margin-left: -1px;
+    margin-top: 5px;
+}
+
+.err-color span {
+    color: #587a9a !important;
+}
+
+
+.custom-radio {
+  margin-top: 7px;
+  margin-bottom: -1px;
+}
+
+.forfile {
+  margin-top: -4px;  
+} 

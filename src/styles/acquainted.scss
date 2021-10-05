@@ -1,0 +1,10 @@
+a { 
+    color: #e41601;
+    //color: #ef5b4c; Цвет из макета: ругается Lighthouse Accessibility
+    text-decoration: none;
+    &:hover {
+      color: darken(#e41601, 5%);
+      cursor: pointer;
+      text-decoration: none;
+    }
+}   

@@ -1,0 +1,42 @@
+.modal-dialog-centered {
+	padding-left: 52.5px;
+	padding-right: 52.5px; 
+}
+
+.modal-content {
+	height: auto;
+}
+
+.modal-header {
+	padding-bottom: 15px;
+}
+
+.modal-header h4 {
+	margin-top: -6px;
+	letter-spacing: -.015rem;
+}
+
+.modal-header button:hover {
+	background: transparent;
+}
+
+.modal-body {
+	padding-top: 17px;
+	padding-bottom: 0;
+}
+
+.modal-body p {
+	margin-top: -1px;
+	padding: 0;
+}
+
+.modal-footer {
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+.modal-footer button {
+	padding-right: 16px;
+	padding-left: 19px;
+	margin-top: 0px;
+}

@@ -1,0 +1,175 @@
+  <div class="row register-form bg-light" id='register'>            
+    
+    <h1 class="col-12 text-center" id='register'>Register to get a work</h1> 
+    <span class="col-12 text-center d-none d-md-inline">
+      Attention! After successful registration and alert, update the
+    </span> 
+    <span class="col-12 text-center d-none d-md-inline">
+      list of users in the block from the top
+    </span>
+
+    <p class="col-12 text-center p-3 d-md-none">
+      Attention! After successful registration and alert, update the
+      list of users in the block from the top
+    </p>
+    
+
+    <div class="col-md-8 col-lg-6 mx-auto" *ngIf='userForm'> 
+      
+      <form enctype="multipart/form-data" method='post' 
+      [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      
+        
+        <div class="form-group">
+                   
+          <label for="user_name"> Name</label>   
+          <input formControlName="name" 
+              [ngClass]="{'is-invalid' : invalidField('name')}"
+                        type="text" class="form-control"  
+                        placeholder="Your name" id="user_name" 
+                        name="name" required/>
+          <div [ngClass]="{'err-color' : invalidField('name')}" class="invalid-feedback">  
+            Error 
+            <span class="float-right" *ngIf='userForm.controls.name.errors'>
+              <span *ngIf='userForm.controls.name.errors.required'>
+                  Name required
+              </span> 
+              <span *ngIf='userForm.controls.name.errors.minlength'>
+                  Name should be 2 characters at least 
+              </span> 
+              <span *ngIf='userForm.controls.name.errors.maxlength'>
+                  Name must be no more than 60 characters
+              </span> 
+            </span>  
+          </div> 
+                
+        </div>
+  
+        
+        <div class="form-group">  
+                   
+          <label for="user_email">Email</label>   
+          <input  formControlName="email" 
+                  [ngClass]="{'is-invalid' : invalidField('email')}"
+                  class="form-control" type="email"
+                  placeholder="Your email" id="user_email"
+                  name="email" required/>
+                  
+          <div  [ngClass]="{'err-color' : invalidField('email')}"  class="invalid-feedback">  
+            Error 
+            <span class="float-right" *ngIf='userForm.controls.email.errors'>
+              <span *ngIf='userForm.controls.email.errors.required'>
+                  Email required
+              </span> 
+              <span *ngIf='userForm.controls.email.errors.pattern'>
+                  Email must be a valid. Example: jhon@example.com.
+              </span> 
+              <span *ngIf='userForm.controls.email.errors.email'>
+                  Email must be a valid. Example: jhon@example.com.
+              </span> 
+              <span *ngIf='userForm.controls.email.errors.minlength'>
+                  2 characters at least. 
+              </span> 
+              <span *ngIf='userForm.controls.email.errors.maxlength'>
+                  No more than 100 characters.
+              </span>  
+            </span>   
+          </div>                  
+        
+        </div>
+
+
+        <div class="form-group" data-name="phonegroup" >  
+                  
+          <label for="user_phone">Phone number</label> 
+          <input  formControlName="phone" aria-describedby="phoneHelpBlock"
+                  [ngClass]="{'is-invalid' : invalidField('phone')}"
+                  class="form-control" type="phone" 
+                  placeholder="+380 XX XXX XX XX" id="user_phone" 
+                  name="phone" required/>   
+          <div [hidden]= "invalidField('phone')" class='form-text' id="phoneHelpBlock"> 
+            Enter phone number in open format
+          </div>
+          <div [ngClass]="{'err-color' : invalidField('phone')}" class="invalid-feedback">  
+            Error
+            <span class="float-right" *ngIf='userForm.controls.phone.errors'>
+              <span *ngIf='userForm.controls.phone.errors.required'>
+                Phone required
+              </span> 
+              <span *ngIf='userForm.controls.phone.errors.pattern'>
+                Start with code +380. Must be 13 characters. Example: +380955388485
+              </span>
+            </span>  
+          </div>             
+        
+        </div>
+
+        
+        <div class="form-group" aria-label="Position">
+          
+          <label class='radiolable' for=""> 
+            Select your position 
+          </label> 
+                  
+          <div *ngFor='let position of positions' class="custom-control custom-radio">
+            <input  formControlName="position_id"
+              [ngClass]="{'is-invalid' : invalidField('position_id')}"
+                    type="radio" class='custom-control-input'
+                    [value]="position.id" name='position_id' 
+                    [id]="position.id" >  
+                     
+            <label class='custom-control-label' [for]="position.id">{{position.name}}</label>
+                    
+          </div>
+        </div> 
+
+        
+        <div class="form-group forfile">
+          
+          <label for="">Photo</label>
+          <div  class="custom-file">
+            <input  formControlName='photo'  
+                    (change)="onPicked(picked)"
+                    [ngClass]="{'is-invalid' : invalidFieldPhoto()}"
+                    type='file' class="custom-file-input" name='photo'                    
+                    id="user_file" #picked>
+            <label  *ngIf="!submitted || ( !invalidFieldPhoto())" 
+            class="custom-file-label" for="user_file">
+              Upload your photo
+            </label>
+            <label *ngIf="invalidFieldPhoto()" class='custom-file-label' 
+            for="user_file">No file choosen
+            </label>
+            <div [ngClass]="{'err-color' : invalidFieldPhoto()}" class="invalid-feedback">  
+              Error
+              <span class="float-right" *ngIf='fS.imgErrorMessage!=="NONE"'>
+                {{fS.imgErrorMessage}}
+              </span> 
+            </div>        
+          </div>
+        
+        </div>
+        
+        <div class="text-center">
+          <button type="submit" class="btn btn-success" [disabled]='offline||!showWait'  
+            id='formBtn' popoverTitle="DISCONNECTED" popover="Please check a online state." 
+            triggers="" [isOpen]='offline' placement="bottom">
+            <span [hidden]='showButton' class='text-light'>Sign up now</span> 
+            <span [hidden]='showWait' class='text-light'>
+          
+              <span class= "spinner-border text-info mr-2" style = 
+                'height: 25px; width: 25px; border-right: 0.3rem dotted white;'>
+              </span>  
+
+                Wait...
+            </span>
+          </button>          
+        </div>
+
+      </form>
+
+    </div>        
+      
+  </div> 
+
+  

@@ -1,0 +1,216 @@
+  .row {
+    @include make-row(); 
+    padding-left: 15px; 
+    padding-right: 15px; 
+    > .col,
+    > [class*="col-"] {
+      padding-right: 15px;
+      padding-left: 15px;
+    } 
+  } 
+  
+  h1 {
+    font-size: 40px; 
+    line-height: 44px;
+  }  
+   
+  .navbar {
+    height: 60px; 
+  }
+  
+  .tt {
+    padding-bottom: 3px;
+  }
+  
+  .menu {
+   padding-right: 15px;
+   padding-bottom: 2px;
+  }
+
+  .banner {
+    height: 500px;
+    background: url(/assets/banner-photo.jpg)  no-repeat  left top / 133.7% 120%; 
+  }
+
+  .banner h1 .assign {
+    letter-spacing: -.035rem;
+    word-spacing: .09rem; 
+    margin-left: 12px;
+  }
+  
+  .banner h1 .frontend {
+    letter-spacing: -.03rem;
+    word-spacing: .09rem;
+    margin-left: 0; 
+  }
+
+  .banner h1 .dev {
+    letter-spacing: -.03rem;
+    word-spacing: .05rem;
+    margin-left: 0; 
+  }
+
+  .banner h1 {
+    margin-top: 59px;
+  } 
+
+  .banner p {
+    margin: 28px 0 34px 1px;
+  } 
+
+  .about-me h1 { 
+    margin-top: 113px;
+    margin-bottom: 67px;
+    margin-left: 1px;
+    letter-spacing: -.04rem;
+    word-spacing: .085rem;
+  }
+  
+  .developer .lastchild {
+    margin-bottom: 29px;
+  }
+  
+  .developer p .we .js, 
+  .developer p .we .css,
+  .developer p .we {
+    word-spacing: .072rem;
+  }
+  
+  .developer p .we .js {
+    margin-left: -1px;
+  }
+  
+  .developer p .first .code,
+  .developer p .first {
+    word-spacing: .0063rem;
+  }
+  
+  .developer p .first .rd {
+    word-spacing: -.0063rem;
+  }
+  
+  .developer p .second,
+  .developer p .second .project {
+    word-spacing: -.04rem;
+  }
+  
+  .developer p .third {
+    margin-left: 1px;
+    word-spacing: .06rem;
+  }
+  
+  .developer p .third .will {
+    word-spacing: .06rem;
+  }
+  
+  .developer p .third .any {
+    word-spacing: .03999rem;
+  }
+
+  .developer p .fourth {
+    word-spacing: .045rem;
+  }
+  
+  .developer p .fourth .well,
+  .developer p .fourth .well .page .ok {
+    word-spacing: .3rem;
+  }
+  
+  .developer a {
+    margin-left: 0;
+  }
+
+  .developer {
+    padding-left: 31px;
+    margin-bottom: 116px;
+  }
+  
+  .man-laptop {
+    padding: 4px 0 0 0;
+    margin-right: -31px;
+  }
+
+  .users h1 {
+    margin-top: 111px;
+    margin-bottom: 18px;
+  }
+
+  .users h1+p {
+    margin-left: -1px;
+    margin-bottom: 54px;
+  }
+
+  .users img { 
+    margin-left: 1px;
+  }
+  
+  .users .usercard {
+    margin-top: 22px;
+    margin-bottom: 33px;
+  }
+  
+  .users button {
+    margin-top: 0;
+    margin-bottom: 121px;
+  }
+
+  .register-form h1 {
+    margin-top: 110px;
+    margin-bottom: 18px;
+    margin-left: 4px;
+  }
+
+  .register-form span {
+    margin-left: 4px;
+    margin-bottom: -2px;
+    color: #4c4b4b;
+  }
+
+  .register-form form {
+    margin-top: 29px;
+  }
+
+  .form-group {
+    margin-right: -7px; 
+    margin-left: 2px;
+  }
+  
+  .register-form div form div[data-name="phonegroup"] {
+    margin-bottom: 19px;
+  }
+
+  .custom-file-label {
+    padding-left: .8rem;
+  }
+
+  .register-form button {
+    margin-top: 20px;
+    margin-left: 8px;
+    margin-bottom: 118px; 
+    padding-right: 3.5rem;
+    padding-left: 3.4rem;
+    word-spacing: -.015rem;
+  }
+  
+  .form-text {
+    margin-left: 0;  
+    word-spacing: normal; 
+  }
+
+  footer p {
+    padding: 16px 0 19px 9px;
+  }
+
+  .modal-content {
+    height: 192px;
+  }
+
+  .modal-footer {
+    padding-bottom: 24px;
+  } 
+
+  .scroll {  
+    max-height: -moz-calc(100vh - 60px);
+    max-height: -webkit-calc(100vh - 60px);
+    max-height: calc(100vh - 60px);
+  } 

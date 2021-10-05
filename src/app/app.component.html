@@ -1,0 +1,131 @@
+<img style='display: none' src="assets/favicon.webp"
+  onload="try { this.parentNode.classList.add('webp'); 
+    document.getElementById('webpImg').setAttribute('href', 'assets/banner-photo.webp');} catch (_) {}"
+  onerror="try { this.parentNode.classList.add('no-webp'); 
+    document.getElementById('webpImg').setAttribute('href', 'assets/banner-photo.jpg');} catch (_) {}"
+     width="16" height="16"
+/>
+
+<header class="container-xl fixed-top" id='headId'>
+  <div class="row bg-light shadow-sm mb-5 " role="banner">
+      
+      <nav class="navbar col-12 navbar-light pr-md-0">
+  
+        <div class='tt'>
+          <img src="assets/logo.svg" alt="logo" width="135" height="20">
+        </div>  
+        
+        <div class="d-none d-lg-block" role="navigation">
+          <nav class="nav">
+            <a routerLink="/customers">About me</a>
+            <a routerLink="/customers">Relationships</a>
+            <a routerLink="/customers">Requirements</a>
+            <a routerLink="/customers">Users</a>
+            <a routerLink="/customers">Sign Up</a>
+          </nav>
+        </div> 
+    
+        <div class="menu d-lg-none" (click)="showSidebarMenu()" role="button" id='sidebarTrigger'>
+          <img src="assets/menu-icon.svg" alt="line menu" width="20" height="15">
+        </div>
+         
+      </nav>
+    
+  </div>
+</header>
+
+<div class="container-xl" role="main" style="min-height: 100vh">
+  
+  <div class="row bg-light">
+    <nav class="navbar col-12 navbar-light pr-md-0"></nav>
+  </div>
+  
+  <div class="banner row " id='removeStyle' style="background: #3e526b">           
+    
+    <div class="col-md-8 col-lg-7 text-white">
+      <div class="text-md-left text-center ml-md-0 mx-auto pr-lg-3">
+        <h1 class="text-uppercase">
+          <span class="test">Test</span> 
+          <span class="assign">assignment</span>
+          <span class="frontend d-block">for frontend</span> 
+          <span class="dev">developer position</span>
+        </h1>
+
+        <p>We kindly remind you that your test assignment 
+          should be submitted as a link to github/bitbucket repository. 
+        <span class="d-none d-md-inline">
+          Please be patient, 
+          we consider and respond to every application that meets minimum requirements.
+          We look forward to your submission. Good luck! 
+          The photo has to scale in the banner area on the different screens
+        </span>
+
+        </p>
+        <a routerLink="/customers" class="btn btn-success" role="button" aria-pressed="true">
+          Sign up now
+        </a>
+      </div>  
+    </div>
+  </div> 
+  
+  <div class="about-me row bg-light">            
+    
+    <div class="col-12 text-center">
+      <h1>Let's get acquainted</h1>
+    </div>
+    
+    <div class="col-md-4 col-lg-5">
+      <div class="man-laptop text-center mx-lg-auto">
+        <img src="assets/man-laptop-v1.svg" class="img-fluid" alt='funny programmer'
+        width="429" height="362"> 
+      </div>
+
+    </div>    
+    
+    <div class="col-md-8 col-lg-7">
+      <div class="developer">  
+        
+        <h2 class='text-md-left text-center'>I am cool frontend developer</h2>
+        <p>
+          <span class='we'>
+            We will evaluate how clean your approach to 
+            <span class='css'>writing CSS and </span>  
+            <span class='js'>Javascript</span> 
+          </span>
+          <span class='first'>  
+            <span class="code"> code is. You can</span> use any CSS and Javascript 
+            <span class='rd'>3rd party libraries without any restriction.</span>
+          </span>
+        </p>
+        <p class='lastchild'>
+          <span class='second'>
+            If 3rd party css/javascript libraries are added 
+            <span class='project'>to the project via </span>
+          </span>
+          <span class='third'>  
+            <span class='will'>bower/npm/yarn you will </span> 
+            get bonus points.  
+            <span class='any'>If you use any task runner</span> 
+          </span>
+          <span class='fourth'>  
+            (gulp/webpack) you will get bonus points 
+            <span class='well'>as well. Slice service directory
+              <span class='page'>page P​SD <span class='ok'>mockup​ into HTML5/CSS3.</span></span>
+            </span>
+          </span>
+         
+        </p>
+        <div class='text-md-left text-center'>
+          <a routerLink="/customers">Sign up now</a>
+        </div>
+      </div>
+    </div>
+      
+  </div> 
+
+</div>
+<router-outlet></router-outlet> 
+
+<footer class="container-xl border-top bg-light">
+  <p class="text-center">© abz.agency specially for the test task</p>
+</footer>

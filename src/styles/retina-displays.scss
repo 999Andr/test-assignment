@@ -1,0 +1,57 @@
+// the set of images for retina displays does not exist on this app (svg work well anywhere)
+
+@media (-webkit-min-device-pixel-ratio: 2) { 
+   /*
+   .img { 
+      background-image: url (assets/image@2x.png); 
+   } 
+   */
+} 
+
+@media (-webkit-min-device-pixel-ratio: 4) { 
+    /* 
+    .img { 
+      background-image: url (assets/image@4x.png); 
+   } 
+   */
+}
+
+/* alternatively can use in html:
+
+
+</picture>
+  <source
+        type="image/png"
+        media="(min-width: 1025px)"
+        srcset="assets/desktop/image@1.png 1x, 
+                assets/desktop/image@2.png 2x, 
+                assets/desktop/image@3.png 3x, 
+                assets/desktop/image@4.png 4x"
+    >
+    <source
+        type="image/png"
+        media="(max-width: 1024px)"
+        srcset="assets/tablet/image@1.png 1x, 
+                assets/tablet/image@2.png 2x, 
+                assets/tablet/image@3.png 3x, 
+                assets/tablet/image@4.png 4x"
+    />
+    <source
+        type="image/png"
+        media="(max-width: 768px)"
+        srcset="assets/mobile/image@1.png 1x, 
+                assets/mobile/image@2.png 2x, 
+                assets/mobile/image@3.png 3x, 
+                assets/mobile/image@4.png 4x"
+    >
+    <img
+        alt="retina_image"        
+        src="assets/desktop/image@1.png"
+        srcset="assets/desktop/image@1.png 1x, 
+                assets/desktop/image@2.png 2x, 
+                assets/desktop/image@3.png 3x,
+                assets/desktop/image@4.png 4x"
+    />
+</picture> 
+
+*/

@@ -1,0 +1,74 @@
+#sideBar {
+  z-index: 999999999;
+  position: fixed ;
+  top: 0;
+  left:-290px;
+  width: 290px;
+  background: #fff; 
+  max-height: 100vh;  
+} 
+ 
+.sub-sidemenu {
+  border-top: 1px solid #ccc;
+  padding: 12px 0 18px 0;
+  &:first-child { 
+    border-top: none;
+  } 
+}
+ 
+.sub-sidemenu nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; 
+}
+ 
+.sub-sidemenu nav a {
+  font-size: 16px;
+  padding: 13px 0 6px 14px;
+  margin-right: 9px;
+  text-decoration: none; 
+  color: #212529;
+  cursor: default;
+    &:first-child,
+    &:last-child {
+      padding: 13px 0 6px 15px;
+    }
+    &:active {
+      color: #007bff;
+    } 
+}
+ 
+.scroll { 
+  border-top: 1px solid #ccc; 
+  max-height: -moz-calc(100vh - 40px);
+  max-height: -webkit-calc(100vh - 40px);
+  max-height: calc(100vh - 40px);
+  scrollbar-width: thin;
+  overflow-y: auto;
+
+    
+    &::-webkit-scrollbar {
+      width: 9px;
+      background-color: #ccc; 
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #3e526b;
+      box-shadow: inset -8px 0px 2px 0px #ccc; 
+      -webkit-box-shadow: inset -8px 0px 2px 0px #ccc;
+      -moz-box-shadow: inset -8px 0px 2px 0px #ccc;
+    } 
+
+    &::-webkit-scrollbar-button {
+      display: block;
+      background: #3e526b;
+      border-top: 3px solid #ccc;
+      border-bottom: 3px solid #ccc;
+      border-right: 6px solid #ccc;
+      border-left: none;
+    } 
+}

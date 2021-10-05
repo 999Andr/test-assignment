@@ -1,0 +1,63 @@
+@import "styles-variables"; 
+@import "~bootstrap/scss/bootstrap.scss";
+@import "styles/typography";
+@import "styles/buttons";
+@import "styles/banner";
+@import "styles/acquainted";
+@import "styles/users";
+@import "styles/form";
+@import "styles/modal"; 
+@import "styles/tooltip"; 
+@import "styles/sidebar";
+@import "styles/retina-displays"; 
+
+body::before { 
+  content: "Screens less than 360px are not supported.";
+  font-size: 12px;
+  padding: 3px; 
+}
+
+header, 
+home-page, 
+footer, 
+sidebar-menu {
+  display: none;
+}
+
+@media  screen and (min-width : 360px) { 
+
+  @import "styles/mobile";
+
+}
+ 
+@media  screen and (min-width : 768px) { 
+
+  @import "styles/tablet";
+
+}  
+
+@media  screen and (min-width : 1024px) { 
+  
+  @import "styles/desktop";
+
+} 
+
+@media  screen and (min-width : 2560px) { 
+  
+  body::before { 
+    content: "Screens more than 2560px are not supported.";
+    font-size: 27px;
+    padding: 27px;
+  }
+
+  header, 
+  home-page, 
+  footer, 
+  sidebar-menu {
+    display: none;
+  }  
+
+
+} 
+ 
+ 

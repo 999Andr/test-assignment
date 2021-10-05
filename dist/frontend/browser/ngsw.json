@@ -1,0 +1,108 @@
+{
+  "configVersion": 1,
+  "timestamp": 1630336342075,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/272.bf84ad84f18fbd112825.js",
+        "/favicon.ico",
+        "/index.html",
+        "/manifest.webmanifest",
+        "/polyfills.192069a6e7ff8dc0e733.js",
+        "/runtime.810d2b2bb162d3cc9536.js"
+      ],
+      "patterns": [
+        "https:\\/\\/fonts\\.googleapis\\.com\\/.*",
+        "https:\\/\\/fonts\\.gstatic\\.com\\/s\\/.*"
+      ]
+    },
+    {
+      "name": "assets",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/apple/apple-touch-icon.png",
+        "/assets/banner-photo.jpg",
+        "/assets/banner-photo.webp",
+        "/assets/delay.style.css",
+        "/assets/favicon-16x16.png",
+        "/assets/favicon-32x32.png",
+        "/assets/favicon.webp",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/logo.svg",
+        "/assets/main.f51fa4f79f0fd4227b7c999.js",
+        "/assets/man-laptop-v1.svg",
+        "/assets/menu-icon.svg",
+        "/assets/photo-cover.png",
+        "/assets/photo-cover.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/272.bf84ad84f18fbd112825.js": "eccd41930cadeff87706c62d626c1ffd7e544287",
+    "/assets/apple/apple-touch-icon.png": "77224dc229075fc690b26658578fdd1c70dc2ca3",
+    "/assets/banner-photo.jpg": "bb3b5948afdd70b8059f831e57370ca7d7adb8ef",
+    "/assets/banner-photo.webp": "beefaec0e7e1d1fedd4c3ef84cfc3f7554d8234f",
+    "/assets/delay.style.css": "61103a130efd21e015b02d573d95541ed5e0641e",
+    "/assets/favicon-16x16.png": "263cb85f9a924c0e585a5f07e24be32f4dc7cbc7",
+    "/assets/favicon-32x32.png": "e0f00b2b6e3404a38c65d6970eca9404fc31f74a",
+    "/assets/favicon.webp": "ea5032afc99e2193598d99ed2f4d773b9b628351",
+    "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/logo.svg": "814e2056e3c72a0f164c435edd22d107ceedf874",
+    "/assets/main.f51fa4f79f0fd4227b7c999.js": "9b43605b03edbf192cdcb8fc399283a369fbbd02",
+    "/assets/man-laptop-v1.svg": "ec4f1762aca1a55fd806ea8e2a174a8219d1de7b",
+    "/assets/menu-icon.svg": "9587a9340ece089b0ee571a2801ba67ed1743765",
+    "/assets/photo-cover.png": "f932adf0f5ef26f6e220d7dc4f29ce53f5ac7839",
+    "/assets/photo-cover.svg": "dad8f0bb729c97d09c15ab37f82436fdac730597",
+    "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/index.html": "57840d44ff7f5ba327971f1c402137f2f7f8aa20",
+    "/manifest.webmanifest": "63b272452f7323ec09705c84044faa394ce82a79",
+    "/polyfills.192069a6e7ff8dc0e733.js": "0a77b7ac5b25ce455b94e3e386c58056e081a6ae",
+    "/runtime.810d2b2bb162d3cc9536.js": "6811cf2610b075f1c7e7ed47d58011772c7e1698"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
